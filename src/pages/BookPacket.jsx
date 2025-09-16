@@ -648,7 +648,7 @@ const BookPacket = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Order Detail */}
-            <div className="space-y-4">
+            <div className="space-y-4 border-b pb-4">
               <h3 className="text-xl font-semibold text-gray-700">Order Detail</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {renderAnimatedInput('orderId', 'Order ID')}
@@ -664,7 +664,7 @@ const BookPacket = () => {
             </div>
 
             {/* Customer Detail */}
-            <div className="space-y-4">
+            <div className="space-y-4 border-b pb-4">
               <h3 className="text-xl font-semibold text-gray-700">Customer Detail</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {renderAnimatedInput('consigneeName', 'Consignee Name *', 'text', true)}
@@ -679,7 +679,7 @@ const BookPacket = () => {
             </div>
 
             {/* Shipment Detail */}
-            <div className="space-y-4">
+            <div className="space-y-4 border-b pb-4">
               <h3 className="text-xl font-semibold text-gray-700">Shipment Detail</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {renderAnimatedInput('weigh', 'Weigh (grams) *', 'number', true)}
