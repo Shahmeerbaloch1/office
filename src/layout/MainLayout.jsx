@@ -29,7 +29,7 @@ const MainLayout = () => {
     <div className="flex min-h-screen">
       {/* Mobile Topbar */}
       <div className="md:hidden fixed top-0 left-0 right-0 bg-white shadow flex items-center justify-between p-4 z-50">
-        <h1 className="font-bold text-lg">My App</h1>
+        <h1 className="font-bold text-lg text-indigo-500">Materio</h1>
         <button onClick={() => setIsMobileOpen(true)}>
           <Menu className="w-6 h-6" />
         </button>
