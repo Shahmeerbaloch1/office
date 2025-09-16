@@ -605,7 +605,7 @@ const BookPacket = () => {
         id={name}
         value={formData[name]}
         onChange={handleChange}
-        className="input-field peer p-3 border border-gray-300 outline-indigo-500 rounded-md focus:ring-2 focus:ring-indigo-500 w-full appearance-none"
+        className="input-field peer p-3 border  border-gray-300 outline-indigo-500 rounded-md focus:ring-2 focus:ring-indigo-500 w-full appearance-none"
         required={isRequired}
       >
         <option value="" disabled>{placeholder}</option>
@@ -626,9 +626,9 @@ const BookPacket = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-100 p-8 font-sans">
+      <div className="min-h-screen  bg-gray-100 p-2 font-sans">
         {/* Header */}
-        <header className="flex items-center justify-between mb-8">
+        <header className="flex items-center justify-between mb-2">
           <div className="relative">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             <input
@@ -650,7 +650,7 @@ const BookPacket = () => {
             {/* Order Detail */}
             <div className="space-y-4 border-b pb-4">
               <h3 className="text-xl font-semibold text-gray-700">Order Detail</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 {renderAnimatedInput('orderId', 'Order ID')}
                 {renderAnimatedSelect('division', 'Select Division *', [
                   { value: 'EXPRESS', label: 'EXPRESS' },
@@ -666,7 +666,7 @@ const BookPacket = () => {
             {/* Customer Detail */}
             <div className="space-y-4 border-b pb-4">
               <h3 className="text-xl font-semibold text-gray-700">Customer Detail</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {renderAnimatedInput('consigneeName', 'Consignee Name *', 'text', true)}
                 {renderAnimatedInput('consigneePhone', 'Consignee Phone *', 'tel', true)}
                 {renderAnimatedInput('destinationCity', 'Destination City *', 'text', true)}
@@ -681,7 +681,7 @@ const BookPacket = () => {
             {/* Shipment Detail */}
             <div className="space-y-4 border-b pb-4">
               <h3 className="text-xl font-semibold text-gray-700">Shipment Detail</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 {renderAnimatedInput('weigh', 'Weigh (grams) *', 'number', true)}
                 {renderAnimatedInput('pieces', 'No. of Pieces *', 'number', true)}
                 {renderAnimatedInput('productDescription', 'Product Description *', 'text', true)}
