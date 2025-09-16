@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@keyframes slideDownAndUp {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-down {
+    animation: slideDownAndUp 0.3s ease-in-out forwards;
+  }
+
+
+
+  .input-group {
+    position: relative;
+  }
+  
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    pointer-events: none; /* Make the label unclickable */
+    color: #a0aec0; /* A light gray color */
+  }
+  
+  .input-field:focus + .input-label,
+  .input-field:not(:placeholder-shown) + .input-label {
+    top: 0;
+    left: 8px;
+    font-size: 0.75rem; /* Equivalent to text-xs in Tailwind */
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0 4px;
+  }
