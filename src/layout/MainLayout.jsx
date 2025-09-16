@@ -17,28 +17,35 @@
 
 // export default MainLayout;
 
-
-import Sidebar from "../components/Sidebar";
+import { useState } from "react";
 import { Outlet } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
+import { Menu } from "lucide-react";
 
 const MainLayout = () => {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
   return (
-    <div className="flex flex-col md:flex-row min-h-screen">
-      {/* Sidebar */}
-      <div className="w-full md:w-64 bg-white shadow-md">
-        {/* 
-          👉 Mobile (top): full width
-          👉 Desktop: fixed width (md:w-64)
-        */}
-        <Sidebar />
+    <div className="flex min-h-screen">
+      {/* Mobile Topbar */}
+      <div className="md:hidden fixed top-0 left-0 right-0 bg-white shadow flex items-center justify-between p-4 z-50">
+        <h1 className="font-bold text-lg">My App</h1>
+        <button onClick={() => setIsMobileOpen(true)}>
+          <Menu className="w-6 h-6" />
+        </button>
       </div>
 
+      {/* Sidebar */}
+      <Sidebar isMobileOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)} />
+
       {/* Main Content */}
-      <div className="flex-1 bg-gray-100 p-4">
+      <main className="flex-1 bg-gray-100 p-4 md:ml-1 mt-14 md:mt-0">
         <Outlet />
-      </div>
+      </main>
     </div>
   );
 };
 
 export default MainLayout;
+
+
