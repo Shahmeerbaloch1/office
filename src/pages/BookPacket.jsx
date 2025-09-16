@@ -583,7 +583,7 @@ const BookPacket = () => {
         value={formData[name]}
         onChange={handleChange}
         placeholder=" "
-        className="input-field peer p-3 border border-gray-300 outline-indigo-500 rounded-md focus:ring-2 focus:ring-indigo-500 w-full"
+        className="input-field peer p-3 text-sm  md:p-3 md:text-2xl border border-gray-300 outline-indigo-500 rounded-md focus:ring-2 focus:ring-indigo-500 w-full"
         required={isRequired}
       />
       <label

@@ -39,7 +39,7 @@ const MainLayout = () => {
       <Sidebar isMobileOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)} />
 
       {/* Main Content */}
-      <main className="flex-1 bg-gray-100 p-4 md:ml-1 mt-14 md:mt-0">
+      <main className="flex-1 bg-gray-100 md:ml-1 mt-14 md:mt-0">
         <Outlet />
       </main>
     </div>
